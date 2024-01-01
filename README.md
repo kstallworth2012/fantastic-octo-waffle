@@ -11,12 +11,18 @@
 
 4. Flights details: Get the details on any flight inside the data. With information on passengers, arrival and departure times, boarding passes, tickets etc. 
 
-5. Upgrade to Value pack: A better approach in providing services on low cost without upgrading class. But when you click on to check what features are there in value pack, It just add price to your bag and sometime user is not aware of it.
 
-6. Flight Summary: Get Flight Summary by airport. Each Airport listing will have data on arrivals and departures. Drill down into the components to get further flight information. 
 
-7. Guest Details: Get booking information on passengers and the other flights they are listed on for any particular booking listed,
+5. Flight Summary: Get Flight Summary by airport. Each Airport listing will have data on arrivals and departures. Drill down into the components to get further flight information. 
 
+6. Guest Details: Get booking information on passengers and the other flights they are listed on for any particular booking listed,
+
+## Bootstrap React
+	we used bootstrap with react to  build our UI
+	we split our app into several components
+####Table
+####TableRow
+####SingleDataDetailModel
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
