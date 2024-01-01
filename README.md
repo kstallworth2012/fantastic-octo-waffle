@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# Getting Started with FlightData React App
+
+
+## Fetures & UI/	UX Flow of Application
+1.Home page: Navigate to Airports, Flights,Bookings and Ticketing information
+
+2. Search Flight: Search for Flights,Bookings, Tickets and Airports. 
+
+3. Date selection: Very nicely designed, It seems appealing to me as a user.  On few occasion, No flights available page appeared and again you have to enter details or browse through every single day on listing page.
+
+
+4. Flights details: Get the details on any flight inside the data. With information on passengers, arrival and departure times, boarding passes, tickets etc. 
+
+5. Upgrade to Value pack: A better approach in providing services on low cost without upgrading class. But when you click on to check what features are there in value pack, It just add price to your bag and sometime user is not aware of it.
+
+6. Flight Summary: Get Flight Summary by airport. Each Airport listing will have data on arrivals and departures. Drill down into the components to get further flight information. 
+
+7. Guest Details: Get booking information on passengers and the other flights they are listed on for any particular booking listed,
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
