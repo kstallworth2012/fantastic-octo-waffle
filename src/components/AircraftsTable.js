@@ -1,11 +1,11 @@
 
 import {useContext} from "react"
-import FlightDataContext from "./flightDataContext"
+import FlightDataContext from "../flightDataContext"
 import AircraftsTableRow from "./AircraftsTableRow"
 
 function AircraftsTable() {
-	// body...
-				
+
+         const {aircrafts} = useContext(FlightDataContext)				
   return(
 			<table>
 			<thead>
@@ -13,19 +13,16 @@ function AircraftsTable() {
 			<th>Aircraft Code</th>			
 			<th>Model</th>
 			<th>Range</th>
-			<th></th>
-			<th></th>
-			<th></th>
 			</tr>
 			</thead>
 			<tbody>
 			{
 
-		.map((a)=>{
+		aircrafts.map((a)=>{
 		return(<AircraftsTableRow aircraft_code={a.aircraft_code} model={a.model} range={a.range} />)
 				})
 			}
-			<tbody>
+			</tbody>
 			</table>
 			)
 }

@@ -1,23 +1,12 @@
-function AircraftsTableRow({}){
+function AircraftsTableRow({aircraft_code,model,range}){
 
 			 return(
 
   			<tr>
 
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>  				
-            <td>{}</td>  			
+            <td>{aircraft_code}</td>
+            <td>{model}</td>
+            <td>{range}</td>
             </tr>
 
   	)

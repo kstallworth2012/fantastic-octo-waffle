@@ -1,16 +1,16 @@
 import {useContext} from "react"
-import FlightDataContext from "./flightDataContext"
+import FlightDataContext from "../flightDataContext"
 import TicketFlightsTableRow from "./TicketFlightsTableRow"
 
 
 
 
---     ticket_no character(13) NOT NULL,
---     flight_id integer NOT NULL,
---     fare_conditions character varying(10) NOT NULL,
---     amount numeric(10,2) NOT NULL,
+// --     ticket_no character(13) NOT NULL,
+// --     flight_id integer NOT NULL,
+// --     fare_conditions character varying(10) NOT NULL,
+// --     amount numeric(10,2) NOT NULL,
 function TicketFlightsTable(){
-
+     const {ticketFlights} = useContext(FlightDataContext)
 	return(
 				<table>
 			<thead>
@@ -25,13 +25,15 @@ function TicketFlightsTable(){
 			</thead>
 			<tbody>
 			{
-
-				<TicketFlightsTableRow ticket_no={ticket_no} flight_id={flight_id} 
-											fare_conditions={fare_conditions} amount={amount} />
+					ticketFlights.map((t)=>{
+							return(
+				<TicketFlightsTableRow ticket_no={t.ticket_no} flight_id={t.flight_id} 
+											fare_conditions={t.fare_conditions} amount={t.amount} />)
+						})
 			}
-			<tbody>
+			</tbody>
 			</table>
 			)
 }
 
-export default TicketsFlightsTable
+export default TicketFlightsTable

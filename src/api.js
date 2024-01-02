@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:7070";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:4000";
 class FlighDataAPI {
 
 
@@ -16,8 +16,8 @@ class FlighDataAPI {
 
 			static async getBooking(id){
 				try{
-						const result = await axios.get(`http://localhost:7070/bookings/${id}`)
-					   return result.data 
+						const result = await axios.get(`http://localhost:4000/Bookings/${id}`)
+					   return result
 				}catch(error){
 					console.log(error)
 				}
@@ -25,7 +25,7 @@ class FlighDataAPI {
 
 			static async getAllBookings(){
 				try{
-					   const results = await axios.get("http://localhost:7070/bookings")
+					   const results = await axios.get("http://localhost:4000/Bookings")
 					   return results 
 				}catch(error){
 					console.log(error)
@@ -41,7 +41,7 @@ class FlighDataAPI {
 
 			static async getAllTickets(){
 				try{
-					const results = await axios.get("http://localhost:7070/tickets")
+					const results = await axios.get("http://localhost:4000/Tickets")
 					return results
 				}catch(error){
 					console.log(error)
@@ -56,7 +56,7 @@ class FlighDataAPI {
 
 			static async getAllBoadingPasses(){
 				try{
-					const results = await axios.get("http://localhost:7070/boardingPasses")
+					const results = await axios.get("http://localhost:4000/BoardingPasses")
 					return results
 				}catch(error){}
 			}
@@ -69,7 +69,7 @@ class FlighDataAPI {
 			static async getAllTicketFlights(){
 				try{
 
-					const results = await axios.get("http://localhost:7070/ticketFlights")
+					const results = await axios.get("http://localhost:4000/TicketFlights")
 					return results
 				}catch(error){
 					console.log(error)
@@ -87,7 +87,7 @@ class FlighDataAPI {
 			static async getAllAirports(){
 				try{
 
-					const results = await axios.get("http://localhost:7070/airports")
+					const results = await axios.get("http://localhost:4000/Airports")
 					return results
 				}catch(error){
 					console.log(error)
@@ -104,7 +104,7 @@ class FlighDataAPI {
 			static async getAllFlights(){
 				try{
 
-					const results = await axios.get("http://localhost:7070/flights")
+					const results = await axios.get("http://localhost:4000/Flights")
 					return results
 				}catch(error){
 					console.log(error)
@@ -121,7 +121,7 @@ class FlighDataAPI {
 			static async getAllAircrafts(){
 			
 				try{
-					const results = await axios.get("http://localhost:7070/aircrafts")
+					const results = await axios.get("http://localhost:4000/Aircrafts")
 					return results
 				}catch(error){
 					console.log(error)
@@ -136,7 +136,7 @@ class FlighDataAPI {
 			
 			static async getAllSeats(){
 				try{
-					const results = await axios.get("http://localhost:7070/seats")
+					const results = await axios.get("http://localhost:4000/Seats")
 					return results
 				}catch(error){
 					console.log(error)

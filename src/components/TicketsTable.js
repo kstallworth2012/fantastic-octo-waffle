@@ -1,32 +1,41 @@
 import {useContext} from "react"
-import FlightDataContext from "./flightDataContext"
+import FlightDataContext from "../flightDataContext"
 import TicketsTableRow from "./TicketsTableRow"
 
 
- ticket_no character(13) NOT NULL,
---     flight_id integer NOT NULL,
---     fare_conditions character varying(10) NOT NULL
+ 		// "ticket_no": "0005432000987",
+        // "book_ref": "06B046",
+        // "passenger_id": "8149 604011",
+        // "passenger_name": "VALERIY TIKHONOV",
+        // "contact_data": {
+        //     "phone": "+70127117011"
+        // }
 
 function TicketsTable(){
-
+			const {tickets} = useContext(FlightDataContext)
 	return(
 				<table>
 			<thead>
 			<tr>
 			<th>ticket_no</th>			
-			<th>flight_id</th>
-			<th>fare_conditions</th>
-			<th></th>
-			<th></th>
+			<th>book_ref</th>
+			<th>passenger_name</th>
+			<th>contact_data</th>
 			<th></th>
 			</tr>
 			</thead>
 			<tbody>
 			{
-
-				<TicketsTableRow ticket_no={ticket_no} flight_id={flight_id} fare_conditions={fare_conditions}
+				// 	tickets.map((t)=>{
+				// 			return(
+				// <TicketsTableRow ticket_no={t.ticket_no} 
+				// 	book_ref={t.book_ref} passenger_id={t.passenger_id} 
+				// 	passenger_name={t.passenger_name}
+				// 	contact_data={t.contact_data}
+				// 	/>)
+				// })
 			}
-			<tbody>
+			</tbody>
 			</table>
 			)
 }
