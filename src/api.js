@@ -144,7 +144,24 @@ class FlighDataAPI {
 			}
 
 
+           static async getAllFlightViews(){
+           	   try{
 
+           	   	  const results = await axios.get("http://localhost:4000/FlightView")
+           	   	  return results
+           	   }catch(error){
+           	   	  console.log(error)
+           	   }
+           }
+
+           static async getAllBookingViews(){
+           	    try{
+           	    		const results = await axios.get("http://localhost:4000/BookingViews")
+           	    		return results
+           	    }catch(error){
+           	    	console.log(error)
+           	    }
+           }
 
 
 			// static async (){

@@ -29,7 +29,9 @@ function BoardingPassesTable(){
 				<BoardingPassesTableRow   	ticket_no = {b.ticket_no}
 										    flight_id = {b.flight_id}
 										    boarding_no = {b.boarding_no}
-										    seat_no ={b.seat_no} />)
+										    seat_no ={b.seat_no}
+										    key= {b.ticket_no}
+										     />)
 						})
 			}
 			</tbody>

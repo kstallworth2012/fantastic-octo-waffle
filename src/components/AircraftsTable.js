@@ -19,7 +19,8 @@ function AircraftsTable() {
 			{
 
 		aircrafts.map((a)=>{
-		return(<AircraftsTableRow aircraft_code={a.aircraft_code} model={a.model} range={a.range} />)
+		return(<AircraftsTableRow aircraft_code={a.aircraft_code} 
+		model={a.model.en} range={a.range} key={a.aircraft_code} />)
 				})
 			}
 			</tbody>

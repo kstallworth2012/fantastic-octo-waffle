@@ -59,7 +59,9 @@ function FlightsTable(){
     								status={a.status}
     								aircraft_code={a.aircraft_code} 
     								actual_departure={a.actual_departure}
-    								actual_arrival={a.actual_arrival} />)
+    								actual_arrival={a.actual_arrival} 
+    								key = {a.flight_id}
+    								/>)
     							})
 			}
 			</tbody>

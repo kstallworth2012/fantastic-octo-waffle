@@ -29,6 +29,7 @@ function BookingsTable(){
 					<BookingsTableRow book_ref={a.book_ref} 
 									  book_date={a.book_date}
 									  total_amount={a.total_amount}
+									  key={a.book_ref}
 					 />
 
 			)

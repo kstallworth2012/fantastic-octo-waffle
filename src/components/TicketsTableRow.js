@@ -1,4 +1,4 @@
-function TicketsTableRow({ticket_no,book_ref,passenger_id,passenger_name,contact_data}){
+function TicketsTableRow({ticket_no,book_ref,passenger_id,passenger_name}){
 	 return(
 
   			<tr>
@@ -6,17 +6,7 @@ function TicketsTableRow({ticket_no,book_ref,passenger_id,passenger_name,contact
             <td>{ticket_no}</td>
             <td>{book_ref}</td>
             <td>{passenger_id}</td>
-            <td>{passenger_name}</td>
-            <td>{contact_data}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>  				
-            <td>{}</td>  			
+            <td>{passenger_name}</td>			
             </tr>
 
   	)

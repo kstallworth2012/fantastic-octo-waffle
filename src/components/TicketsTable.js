@@ -19,21 +19,20 @@ function TicketsTable(){
 			<tr>
 			<th>ticket_no</th>			
 			<th>book_ref</th>
+			<th>passenger_id</th>
 			<th>passenger_name</th>
-			<th>contact_data</th>
-			<th></th>
 			</tr>
 			</thead>
 			<tbody>
 			{
-				// 	tickets.map((t)=>{
-				// 			return(
-				// <TicketsTableRow ticket_no={t.ticket_no} 
-				// 	book_ref={t.book_ref} passenger_id={t.passenger_id} 
-				// 	passenger_name={t.passenger_name}
-				// 	contact_data={t.contact_data}
-				// 	/>)
-				// })
+					tickets.map((t)=>{
+							return(
+				<TicketsTableRow ticket_no={t.ticket_no} 
+					book_ref={t.book_ref} passenger_id={t.passenger_id} 
+					passenger_name={t.passenger_name}
+					key={t.ticket_no}
+					/>)
+				})
 			}
 			</tbody>
 			</table>

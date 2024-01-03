@@ -28,7 +28,10 @@ function TicketFlightsTable(){
 					ticketFlights.map((t)=>{
 							return(
 				<TicketFlightsTableRow ticket_no={t.ticket_no} flight_id={t.flight_id} 
-											fare_conditions={t.fare_conditions} amount={t.amount} />)
+											fare_conditions={t.fare_conditions} 
+											amount={t.amount} 
+											key={t.ticket_no}
+											/>)
 						})
 			}
 			</tbody>

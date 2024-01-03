@@ -17,6 +17,9 @@ function App() {
   const [aircrafts,setAircrafts] = useState([])
   const [seats,setAllSeats] = useState([])
   const [flights,setFlights]=useState([])
+  const [flightViews,setFlightViews]=useState([])
+  const [bookingViews,setBookingViews]=useState([])
+
 
 
   useEffect(()=>{
@@ -30,28 +33,37 @@ function App() {
 
                   const result2 = await FlighDataAPI.getAllTickets()
                   setTickets(result2.data)
-                  console.log("=======================================")
+                  console.log("=====================getAllTickets==================")
                   console.log(tickets)
-                  
+                  console.log("=====================getAllTickets==================")
+
                   const result3 = await FlighDataAPI.getAllBoadingPasses()
                   setBoardingPasses(result3.data)
                   console.log(boardingPasses)
                   
-                  // const result4 = await FlighDataAPI.getAllTicketFlights()
-                  // setTicketFlights(result4.data.TicketFlights)
-                  // // console.log(ticketFlights)
+                  const result4 = await FlighDataAPI.getAllTicketFlights()
+                  console.log("================getAllTicketFlights=======================")
+                  setTicketFlights(result4.data)
+                  console.log(ticketFlights)
+                  console.log("================getAllTicketFlights=======================")
+                  
 
-                  // const result5 = await FlighDataAPI.getAllAirports()
-                  // setAirports(result5)
-                  // console.log(airports)
+                  console.log("=====================getAllAirports==================")
+
+                  const result5 = await FlighDataAPI.getAllAirports()
+                  setAirports(result5.data)
+                  console.log(airports)
+                  console.log("=====================getAllAirports==================")
 
                   const result6 = await FlighDataAPI.getAllFlights()
                   setFlights(result6.data)
                   // console.log(flights)
+                  console.log("=====================getAllAircrafts==================")
+                  const result7 = await FlighDataAPI.getAllAircrafts()
+                  setAircrafts(result7.data)
+                  console.log(aircrafts)
+                  console.log("=====================getAllAircrafts==================")
 
-                  // const result7 = await FlighDataAPI.getAllAircrafts()
-                  // setAircrafts(result7.data)
-                  // console.log(aircrafts)
                   const result8 = await FlighDataAPI.getAllSeats()
                   setAllSeats(result8.data)
                   // console.log(seats)
@@ -72,6 +84,22 @@ function App() {
 
 
                   // console.log(result.data.Bookings)
+
+                  const result9 = await FlighDataAPI.getAllFlightViews()
+                  console.log("=====================getAllFlightViews==================")
+                  setFlightViews(result9.data)
+                  console.log(flightViews)
+                  console.log("=====================getAllFlightViews==================")
+
+                  const result10 = await FlighDataAPI.getAllBookingViews()
+                  console.log("=====================getAllBookingViews==================")
+                  setBookingViews(result10.data)
+                  console.log(bookingViews)
+                  console.log("=====================getAllBookingViews==================")
+                  
+
+
+
           }catch(error){
             return console.log(error)
           }
@@ -79,7 +107,7 @@ function App() {
       getBookings()
   },[])
   return (
-    <FlightDataContext.Provider value={{bookings,tickets,ticketFlights,flights,boardingPasses,seats,aircrafts,airports}}>
+    <FlightDataContext.Provider value={{bookings,bookingViews,flightViews,tickets,ticketFlights,flights,boardingPasses,seats,aircrafts,airports}}>
     <div className="App">
     <Navbar />
     <Routes />

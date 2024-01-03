@@ -4,14 +4,7 @@ import FlightDataContext from "../flightDataContext"
 import AirportsTableRow from "./AirportsTableRow"
 
 
-// airports.map((a)=>{
 
-// 							return(
-// 				<AirportsTableRow airport_code={a.airport_code} 
-
-								 
-// 								 />)
-// 							})
 function AirportsTable(){
 		         const {airports} = useContext(FlightDataContext)				
 
@@ -25,14 +18,23 @@ function AirportsTable(){
 			<th>Airport Code</th>			
 			<th>Airport Name</th>
 			<th>City</th>
-			<th>Coordinates</th>
 			<th>Timezone</th>
 			
 			</tr>
 			</thead>
 			<tbody>
 			{ 
+									airports.map((a)=>{
 
+							return(
+				<AirportsTableRow airport_code={a.airport_code} 
+								  airport_name={a.airport_name.en}
+								  city={a.city.en}
+								  timezone={a.timezone}
+
+								 
+								 />)
+							})
 				
 			}
 			</tbody>

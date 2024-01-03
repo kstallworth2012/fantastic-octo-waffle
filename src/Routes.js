@@ -7,7 +7,8 @@ import BoardingPassesTable from "./components/BoardingPassesTable"
 import TicketFlightsTable from "./components/TicketFlightsTable"
 import TicketsTable from "./components/TicketsTable"
 import SeatsTable from "./components/SeatsTable"
-
+import FlightViewTable from "./components/FlightViewTable"
+import BookingViewsTable from './components/bookingViewsTable'
 function Routes(){
 			return(
 				<div>
@@ -44,6 +45,12 @@ function Routes(){
 
 							<Route exact path = "/seats">
 							<SeatsTable />
+							</Route>
+							<Route exact path = "/flight-views">
+								<FlightViewTable />
+							</Route>
+							<Route exact path = "/booking-views">
+							  <BookingViewsTable />
 							</Route>
 						</Switch>
 				</div>

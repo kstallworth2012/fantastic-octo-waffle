@@ -32,7 +32,10 @@ function SeatsTable(){
 						seats.map((s)=>{
 							return(
 						<SeatsTableRow aircraft_code={s.aircraft_code} 
-										seat_no={s.seat_no} fare_conditions = {s.fare_conditions} />)
+										seat_no={s.seat_no} 
+										fare_conditions = {s.fare_conditions} 
+										key={s.aircraft_code}
+										/>)
 							})
 
 
