@@ -1,6 +1,7 @@
 import {useContext} from "react"
 import FlightDataContext from "../flightDataContext"
 import TicketFlightsTableRow from "./TicketFlightsTableRow"
+import Table from 'react-bootstrap/Table';
 
 
 
@@ -12,7 +13,7 @@ import TicketFlightsTableRow from "./TicketFlightsTableRow"
 function TicketFlightsTable(){
      const {ticketFlights} = useContext(FlightDataContext)
 	return(
-				<table>
+				<Table striped>
 			<thead>
 			<tr>
 			<th>ticket_no</th>			
@@ -35,7 +36,7 @@ function TicketFlightsTable(){
 						})
 			}
 			</tbody>
-			</table>
+			</Table>
 			)
 }
 

@@ -1,3 +1,7 @@
+import {useState} from "react"
+import Button from 'react-bootstrap/Button'
+
+
 // {
 //             book_ref,
 //             ticket_no,
@@ -27,9 +31,18 @@ function BookingViewsTableRow({book_ref,
             status,
             seat_no}){
 
+
+
+  // For the popup modal
+ const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
         return(
               <tr>
-              <td>{book_ref}</td>
+              <td><Button variant="success">{book_ref}</Button></td>
               <td>{ticket_no}</td>
               <td>{passenger_id}</td>
               <td>{passenger_name}</td>

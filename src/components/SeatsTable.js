@@ -1,6 +1,7 @@
 import {useContext} from "react"
 import FlightDataContext from "../flightDataContext"
 import SeatsTableRow from "./SeatsTableRow"
+import Table from 'react-bootstrap/Table';
 
 
 // --     aircraft_code character(3) NOT NULL,
@@ -16,7 +17,7 @@ function SeatsTable(){
 
 	return(
 
-			<table>
+			<Table striped>
 			<thead>
 			<tr>
 			<th>aircraft_code</th>			
@@ -41,7 +42,7 @@ function SeatsTable(){
 
 			}
 			</tbody>
-			</table>
+			</Table>
 
 		)
 
