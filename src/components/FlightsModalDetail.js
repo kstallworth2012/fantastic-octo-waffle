@@ -1,14 +1,35 @@
-FlightsModalDetail.js
+// FlightsModalDetail.js
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+
+
+function FlightsModalDetail({show,onHide,flight_no}){
 
  return(
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+  // Modal Structure -->
+  <>
+    <Modal  show={show} onHide={onHide}>
+        <Modal.Header closeButton>
+          <Modal.Title>Flight Number:{flight_no}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={onHide}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={onHide}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </>
      ) 
+
+}
+
+
+export default FlightsModalDetail

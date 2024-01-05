@@ -35,7 +35,7 @@ import FlightViewTableRow from './FlightViewTableRow'
 // 					})
 
 
-
+import Table from 'react-bootstrap/Table';
 
 
 function FlightViewTable(){
@@ -44,7 +44,7 @@ function FlightViewTable(){
 		return(
 
 		  <div>
-		  	<table>
+		  	<Table striped="columns">
 		  	<thead>
 			<tr>
 				<th>actual_arrival</th>
@@ -104,7 +104,7 @@ function FlightViewTable(){
 				
 			}
 			</tbody>
-		  	</table>
+		  	</Table>
 		  </div>
 		  )
 			

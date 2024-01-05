@@ -1,26 +1,34 @@
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from 'react-bootstrap/Container'
 import { Link, NavLink } from "react-router-dom";
 
 
-function Navbar(){
+function NavBar(){
 
 
 	return (
 
-
-			<nav>
-			<Link to="/">Home</Link><br />
-			<Link to="/bookings">Bookings</Link><br />
-			<Link to="/aircrafts">Aircraft</Link><br />
-			<Link to="/flights">Flights</Link><br />
-			<Link to="/airports">Airports</Link><br />
-			<Link to="/boardingpasses">Boarding Passes</Link><br />
-			<Link to="/ticket-flights">Flights</Link><br />
-			<Link to="/tickets">Tickets</Link><br />
-			<Link to="/seats">Seats</Link><br />
-			<Link to= "/flight-views">Flight Views</Link><br />
-            <Link to="/booking-views">Booking Views</Link>
-			</nav>
+     	<Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
+		<Container>
+			
+			<Navbar.Brand href="/">Flight Data</Navbar.Brand>
+			<Nav.Link><NavLink to="/">Home</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/bookings">Bookings</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/aircrafts">Aircraft</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/flights">Flights</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/airports">Airports</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/boardingpasses">Boarding Passes</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/ticket-flights">Flights</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/tickets">Tickets</NavLink></Nav.Link>
+			<Nav.Link><NavLink to="/seats">Seats</NavLink></Nav.Link>
+			<Nav.Link><NavLink to= "/flight-views">Flight Views</NavLink></Nav.Link>
+            <Nav.Link><NavLink to="/booking-views">Booking Views</NavLink></Nav.Link>
+			
+		</Container>
+		</Navbar>
 		)
 }
 
-export default Navbar
+export default NavBar

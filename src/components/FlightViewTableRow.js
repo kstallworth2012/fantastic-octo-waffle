@@ -1,3 +1,8 @@
+import {useState} from "react"
+import Button from 'react-bootstrap/Button'
+
+
+
 
 					// <td>{scheduled_duration_hours}</td>
 					// <td>{scheduled_duration_minutes}</td>
@@ -47,9 +52,17 @@ function FlightViewTableRow({actual_arrival,
 							}){
 
 
+
+// For the popup modal
+ const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
 			return(
 					<tr>
-					<td>{actual_arrival}</td>
+					<td><Button variant="success">{actual_arrival}</Button></td>
 					<td>{actual_arrival_local}</td>
 					<td>{actual_departure}</td>
 					<td>{actual_departure_local}</td>

@@ -2,7 +2,7 @@
 import {useContext} from "react"
 import FlightDataContext from "../flightDataContext"
 import AirportsTableRow from "./AirportsTableRow"
-
+import Table from 'react-bootstrap/Table';
 
 
 function AirportsTable(){
@@ -12,7 +12,7 @@ function AirportsTable(){
 
 			 // airport_code ,airport_name NULL,city, coordinates, timezone 
     
-			<table>
+			<Table striped>
 			<thead>
 			<tr>
 			<th>Airport Code</th>			
@@ -38,7 +38,7 @@ function AirportsTable(){
 				
 			}
 			</tbody>
-			</table>
+			</Table>
 			)
 }
 

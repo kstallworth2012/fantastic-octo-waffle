@@ -2,12 +2,13 @@
 import {useContext} from "react"
 import FlightDataContext from "../flightDataContext"
 import AircraftsTableRow from "./AircraftsTableRow"
+import Table from 'react-bootstrap/Table';
 
 function AircraftsTable() {
 
          const {aircrafts} = useContext(FlightDataContext)				
   return(
-			<table>
+			<Table striped>
 			<thead>
 			<tr>
 			<th>Aircraft Code</th>			
@@ -24,7 +25,7 @@ function AircraftsTable() {
 				})
 			}
 			</tbody>
-			</table>
+			</Table>
 			)
 }
 

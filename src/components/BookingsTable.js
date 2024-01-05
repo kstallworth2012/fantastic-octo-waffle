@@ -2,6 +2,7 @@
 import {useContext} from "react"
 import FlightDataContext from "../flightDataContext"
 import BookingsTableRow from './BookingsTableRow'
+import Table from 'react-bootstrap/Table';
 
 // BookingsTable.js
 
@@ -14,7 +15,7 @@ function BookingsTable(){
    console.log(bookings)
 	return(
 			<div>
-			<table>
+			<Table striped>
 			<thead>
 			<tr>
 			<th>Book Ref</th>			
@@ -36,7 +37,7 @@ function BookingsTable(){
 					})
 				}
 			</tbody>
-			</table>
+			</Table>
 			</div>
 			)
 
