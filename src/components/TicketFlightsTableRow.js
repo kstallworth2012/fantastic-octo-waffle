@@ -1,5 +1,7 @@
 import {useState} from "react"
 import Button from 'react-bootstrap/Button'
+import TicketFlightsModalDetail from "./TicketFlightsModalDetail"
+
 
 function TicketFlightsTableRow({ticket_no,flight_id,fare_conditions,amount}){
      // For the popup modal
@@ -13,20 +15,13 @@ function TicketFlightsTableRow({ticket_no,flight_id,fare_conditions,amount}){
 
   			<tr>
 
-            <td><Button variant="success">{ticket_no}</Button></td>
+            <td><Button variant="success" onClick={handleShow}>{ticket_no}</Button></td>
             <td>{flight_id}</td>
             <td>{fare_conditions}</td>
             <td>{amount}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>
-            <td>{}</td>  				
-            <td>{}</td>  			
+
+            <TicketFlightsModalDetail show={show} onHide={()=>setShow(false)}
+            ticket_no = {ticket_no} /> 			
             </tr>
 
   	)

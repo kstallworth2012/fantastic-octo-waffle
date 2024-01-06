@@ -1,6 +1,6 @@
 import {useState} from "react"
 import Button from 'react-bootstrap/Button'
-
+import BookingViewsModalDetail from './BookingViewsModalDetail'
 
 // {
 //             book_ref,
@@ -42,7 +42,7 @@ function BookingViewsTableRow({book_ref,
 
         return(
               <tr>
-              <td><Button variant="success">{book_ref}</Button></td>
+              <td><Button variant="success" onClick={handleShow}>{book_ref}</Button></td>
               <td>{ticket_no}</td>
               <td>{passenger_id}</td>
               <td>{passenger_name}</td>
@@ -54,7 +54,9 @@ function BookingViewsTableRow({book_ref,
               <td>{arrival}</td>
               <td>{status}</td>
               <td>{seat_no}</td>
-
+              <BookingViewsModalDetail show={show} onHide={() => setShow(false)}
+                book_ref={book_ref}
+              />
 
               </tr>
 

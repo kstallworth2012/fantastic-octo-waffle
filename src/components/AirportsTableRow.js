@@ -1,5 +1,8 @@
 import {useState} from "react"
 import Button from 'react-bootstrap/Button'
+import AirportsModalDetail from './AirportsModalDetail'
+
+
 
 function AirportsTableRow({airport_code ,airport_name,city, coordinates, timezone }){
 
@@ -15,10 +18,16 @@ function AirportsTableRow({airport_code ,airport_name,city, coordinates, timezon
 
   			<tr>
 
-            <td><Button variant="success">{airport_code}</Button></td>
+            <td><Button variant="success" onClick={handleShow}>{airport_code}</Button></td>
             <td>{airport_name}</td>
             <td>{city}</td>
-            <td>{timezone}</td>			
+            <td>{timezone}</td>	
+
+            <AirportsModalDetail 
+                show={show}
+                onHide={() => setShow(false)}
+                airport_name={airport_name}
+            />		
             </tr>
 
   	)

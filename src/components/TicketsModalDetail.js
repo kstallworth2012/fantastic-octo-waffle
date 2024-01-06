@@ -6,20 +6,29 @@ import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 
-function TicketsModalDetail() {
+function TicketsModalDetail({show,onHide,ticket_no}) {
 
 
  return(
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+  <>
+    <Modal  show={show} onHide={onHide}>
+        <Modal.Header closeButton>
+          <Modal.Title>Ticket Number:{ticket_no}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={onHide}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={onHide}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </>
      ) 
 
-} 
+}
+
+
+export default TicketsModalDetail  

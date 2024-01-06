@@ -1,5 +1,6 @@
 import {useState} from "react"
 import Button from 'react-bootstrap/Button'
+import FlightViewModalDetail from './FlightViewModalDetail'
 
 
 
@@ -62,14 +63,14 @@ function FlightViewTableRow({actual_arrival,
 
 			return(
 					<tr>
-					<td><Button variant="success">{actual_arrival}</Button></td>
+					<td>{actual_arrival}</td>
 					<td>{actual_arrival_local}</td>
 					<td>{actual_departure}</td>
 					<td>{actual_departure_local}</td>
 					<td>{actual_duration}</td>
 					<td>{aircraft_code}</td>
 					<td>{arrival_airport}</td>
-					<td>{arrival_airport_name}</td>
+					<td><Button variant="success" onClick={handleShow}>{arrival_airport_name}</Button></td>
 					<td>{arrival_city}</td>
 					<td>{departure_airport}</td>
 					<td>{departure_airport_name}</td>
@@ -81,6 +82,8 @@ function FlightViewTableRow({actual_arrival,
 					<td>{scheduled_departure}</td>
 					<td>{scheduled_departure_local}</td>
 					<td>{status}</td>
+					<FlightViewModalDetail show={show} onHide={()=> setShow(false)}
+					arrival_airport_name={arrival_airport_name} />
 					</tr>
 					)
 }
