@@ -83,7 +83,27 @@ function FlightViewTableRow({actual_arrival,
 					<td>{scheduled_departure_local}</td>
 					<td>{status}</td>
 					<FlightViewModalDetail show={show} onHide={()=> setShow(false)}
-					arrival_airport_name={arrival_airport_name} />
+					actual_arrival={actual_arrival}
+								actual_arrival_local={actual_arrival_local}
+								actual_departure={actual_departure}
+								actual_departure_local={actual_departure_local}
+								actual_duration={actual_duration}
+								aircraft_code={aircraft_code}
+								arrival_airport={arrival_airport}
+					arrival_airport_name={arrival_airport_name} 
+
+								arrival_city={arrival_city}
+								departure_airport={departure_airport}
+								departure_airport_name={departure_airport_name}
+								departure_city={departure_city}
+								flight_id={flight_id}
+								flight_no={flight_no}
+								status={status}
+								scheduled_arrival={scheduled_arrival}
+								scheduled_arrival_local={scheduled_arrival_local}
+								scheduled_departure={scheduled_departure}
+								scheduled_departure_local={scheduled_arrival_local}
+					/>
 					</tr>
 					)
 }

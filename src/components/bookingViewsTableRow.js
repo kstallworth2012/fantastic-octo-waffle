@@ -2,6 +2,7 @@ import {useState} from "react"
 import Button from 'react-bootstrap/Button'
 import BookingViewsModalDetail from './BookingViewsModalDetail'
 
+
 // {
 //             book_ref,
 //             ticket_no,
@@ -56,6 +57,17 @@ function BookingViewsTableRow({book_ref,
               <td>{seat_no}</td>
               <BookingViewsModalDetail show={show} onHide={() => setShow(false)}
                 book_ref={book_ref}
+                            ticket_no={ticket_no}
+                            passenger_id={passenger_id}
+                            passenger_name={passenger_name}
+                            fare_conditions={fare_conditions}
+                            amount={amount}
+                            scheduled_departure_local={scheduled_departure_local}
+                            scheduled_arrival_local={scheduled_arrival_local}
+                            departure={departure}
+                            arrival={arrival}
+                            status={status}
+                            seat_no={seat_no}
               />
 
               </tr>

@@ -31,7 +31,16 @@ function FlightsTableRow({flight_id,flight_no,
             <td>{aircraft_code}</td>
             <FlightsModalDetail show={show}
                                  onHide={() => setShow(false)} 
+                                 flight_id={flight_id}
                                  flight_no={flight_no}
+                                 scheduled_departure={scheduled_departure}
+                                 scheduled_arrival={scheduled_arrival}
+                                 departure_airport={departure_airport}
+                                 arrival_airport={arrival_airport}
+                                 status={status}
+                                aircraft_code={aircraft_code}
+                                actual_departure={actual_departure}
+                                actual_arrival={actual_arrival}
 
                                  />			
             </tr>
