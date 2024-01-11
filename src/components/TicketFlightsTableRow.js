@@ -21,7 +21,11 @@ function TicketFlightsTableRow({ticket_no,flight_id,fare_conditions,amount}){
             <td>{amount}</td>
 
             <TicketFlightsModalDetail show={show} onHide={()=>setShow(false)}
-            ticket_no = {ticket_no} /> 			
+            ticket_no = {ticket_no} 
+            flight_id={flight_id}
+            fare_conditions={fare_conditions}
+            amount={amount}
+            /> 			
             </tr>
 
   	)

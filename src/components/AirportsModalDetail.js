@@ -6,8 +6,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
+import ListGroup from 'react-bootstrap/ListGroup'
 
-function AirportsModalDetail({show,onHide,airport_name}){
+function AirportsModalDetail({show,onHide,airport_code ,airport_name,city, timezone }){
 
 console.log("==========AirportsModalDetail==============")
 
@@ -17,7 +18,11 @@ console.log("==========AirportsModalDetail==============")
         <Modal.Header closeButton>
           <Modal.Title>Airport Name:{airport_name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <ListGroup.Item variant="success">Airport Code: {airport_code}</ListGroup.Item>
+          <ListGroup.Item variant="info">Airport City: {city}</ListGroup.Item>
+          <ListGroup.Item variant="success">Airport Time Zone: {timezone}</ListGroup.Item>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close

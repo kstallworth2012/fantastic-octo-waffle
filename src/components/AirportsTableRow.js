@@ -27,6 +27,9 @@ function AirportsTableRow({airport_code ,airport_name,city, coordinates, timezon
                 show={show}
                 onHide={() => setShow(false)}
                 airport_name={airport_name}
+                airport_code={airport_code}
+                city={city} 
+                timezone={timezone}
             />		
             </tr>
 

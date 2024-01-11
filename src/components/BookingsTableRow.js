@@ -23,7 +23,9 @@ function BookingsTableRow({book_ref,book_date,total_amount}){
             <td><Button variant="success" onClick={handleShow}>{book_ref}</Button></td>
             <td>{book_date}</td>
             <td>{total_amount}</td> 
-            <BookingsModalDetail show={show} onHide={()=>setShow(false)} book_ref={book_ref} />			
+            <BookingsModalDetail show={show} onHide={()=>setShow(false)} book_ref={book_ref} book_date={book_date}
+                              total_amount={total_amount}
+             />			
             </tr>
 
   	)

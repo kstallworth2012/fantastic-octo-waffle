@@ -5,8 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
+import ListGroup from 'react-bootstrap/ListGroup'
 
-function BookingsModalDetail({show,onHide,book_ref}){
+function BookingsModalDetail({show,onHide,book_ref,total_amount,book_date},){
  return(
 
    <>
@@ -14,7 +15,11 @@ function BookingsModalDetail({show,onHide,book_ref}){
         <Modal.Header closeButton>
           <Modal.Title>Booking Reference:{book_ref}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>          
+              <ListGroup.Item variant="sucess">Booking Date: {book_date}</ListGroup.Item>
+              <ListGroup.Item variant="info">Total Amount: {total_amount}</ListGroup.Item>
+              <ListGroup.Item variant="info"></ListGroup.Item>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close

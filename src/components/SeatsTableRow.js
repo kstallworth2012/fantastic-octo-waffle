@@ -20,7 +20,10 @@ function SeatsTableRow({aircraft_code,seat_no,fare_conditions}){
             <td>{aircraft_code}</td>
             <td><Button variant="primary" onClick={handleShow}>{seat_no}</Button></td>
             <td>{fare_conditions}</td>
-     			 <SeatsModalDetail show={show} onHide={()=> setShow(false)} seat_no={seat_no}/>
+     			 <SeatsModalDetail show={show} onHide={()=> setShow(false)} 
+                                                          aircraft_code={aircraft_code} 
+                                                          seat_no={seat_no}
+                                                          fare_conditions={fare_conditions}/>
             </tr>
 
   	)

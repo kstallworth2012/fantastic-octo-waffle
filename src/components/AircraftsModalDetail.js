@@ -5,15 +5,21 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
+import ListGroup from 'react-bootstrap/ListGroup'
 
-function AircraftsModalDetail({show,onHide,model}){
+
+function AircraftsModalDetail({show,onHide,model,range}){
  return(
    <>
     <Modal  show={show} onHide={onHide}>
         <Modal.Header closeButton>
           <Modal.Title>Aircraft Model:{model}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <ListGroup>
+          <ListGroup.Item variant="sucess">Aricraft range: {range}</ListGroup.Item>
+          </ListGroup>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close

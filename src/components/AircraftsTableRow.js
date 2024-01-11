@@ -17,7 +17,7 @@ function AircraftsTableRow({aircraft_code,model,range}){
             <td>{range}</td>
             <AircraftsModalDetail show={show}
                                  onHide={() => setShow(false)} 
-                                    model={model}
+                                    model={model} range={range}
                                  />
             </tr>
 

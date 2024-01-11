@@ -21,7 +21,11 @@ function TicketsTableRow({ticket_no,book_ref,passenger_id,passenger_name}){
             <td>{passenger_id}</td>
             <td>{passenger_name}</td>	
             <TicketsModalDetail show={show} onHide={()=>setShow(false)}	
-            ticket_no={ticket_no} />
+            ticket_no={ticket_no}
+            book_ref={book_ref}
+            passenger_id={passenger_id}
+            passenger_name={passenger_name}
+             />
 
             </tr>
 

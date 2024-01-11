@@ -20,7 +20,11 @@ function BoardingPassesTableRow({ticket_no,flight_id,boarding_no,seat_no}){
             <td>{flight_id}</td>
             <td>{boarding_no}</td>
             <td>{seat_no}</td>	
-            <BoardingPassesModalDetail show={show} onHide={()=>setShow(false)} ticket_no={ticket_no} />		
+            <BoardingPassesModalDetail show={show} onHide={()=>setShow(false)} ticket_no={ticket_no} 
+                              flight_id={flight_id}
+                              boarding_no={boarding_no}
+                              seat_no={seat_no}
+            />		
             </tr>
 
   	)

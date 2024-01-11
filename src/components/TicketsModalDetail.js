@@ -5,8 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
+import ListGroup from 'react-bootstrap/ListGroup'
 
-function TicketsModalDetail({show,onHide,ticket_no}) {
+function TicketsModalDetail({show,onHide,ticket_no,book_ref,passenger_id,passenger_name}) {
 
 
  return(
@@ -15,7 +16,11 @@ function TicketsModalDetail({show,onHide,ticket_no}) {
         <Modal.Header closeButton>
           <Modal.Title>Ticket Number:{ticket_no}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <ListGroup.Item variant="success">Booking Reference: {book_ref}</ListGroup.Item>
+          <ListGroup.Item variant="info">Passenger ID: {passenger_id}</ListGroup.Item>
+          <ListGroup.Item variant="success">Passenger Name: {passenger_name}</ListGroup.Item>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close
